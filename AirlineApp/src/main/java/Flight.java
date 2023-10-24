@@ -7,12 +7,21 @@ public class Flight {
     private String destination;
     private ArrayList<Passenger> passengers;
 
+
     public Flight(int flightId, String destination){
         this.flightId = flightId;
         this.destination = destination;
+        this.passengers = new ArrayList<>(); // where do we initialise passengers list
     }
 
 //    METHODS
+    public void addPassenger(Passenger passenger){
+        passengers.add(passenger);
+    }
+    public void removePassenger(Passenger passenger){
+        passengers.remove(passenger);
+    }
+
 
     
 
@@ -40,4 +49,5 @@ public class Flight {
     public void setPassengers(ArrayList<Passenger> passengers) {
         this.passengers = passengers;
     }
+
 }
